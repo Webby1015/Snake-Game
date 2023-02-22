@@ -19,9 +19,9 @@ body{
     height: 70vmin;
     display: flex;
     flex-direction: column;
-    background: rgb(36, 36, 36);
+    background: rgb(43, 43, 43);
     border-radius: 20px;
-    box-shadow: 0 20px 30px #394b39 ;
+    box-shadow: 30px 30px 30px #394b39 ;
 }
 
 .game-details{
@@ -36,8 +36,20 @@ body{
 .play-board{
     width: 100%;
     height: 100%;
-    background: black;
+    background: rgb(33, 33, 33);
     display: grid;
     grid-template:repeat(30,1fr)/repeat(30,1fr) ;
     border-radius: 20px ;
+}
+
+.play-board .food{
+    background: #597459;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #000000
+}
+
+.play-board .head{
+    box-shadow: 5px 5px 5px #000000;
+    background: #aeaeae;
+    border-radius: 5px;
 }
