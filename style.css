@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Open Sans',  sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(180, 243, 173);
+    
+}
+
+.wrapper {
+    width: 65vmin;
+    height: 70vmin;
+    display: flex;
+    flex-direction: column;
+    background: rgb(36, 36, 36);
+    border-radius: 20px;
+    box-shadow: 0 20px 30px #394b39 ;
+}
+
+.game-details{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.play-board{
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: grid;
+    grid-template:repeat(30,1fr)/repeat(30,1fr) ;
+    border-radius: 20px ;
+}
