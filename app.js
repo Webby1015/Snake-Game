@@ -35,16 +35,22 @@ const intiGame = () => {
     let htmlMarkup = `<div class="food" style="grid-area: ${foodY}/${foodX}"></div>`;
     if (snakeX===foodX && snakeX===foodX){
         changeFoodPosition()
-        snakeBody.push([foodX,foodY])
+        snakeBody.push([foodX, foodY]);
         console.log(snakeBody)
+    }
+
+    for (let i= snakeBody.length-1;i>0;i--){
+        snakeBody[i] = snakeBody[i-1]
+
     }
     snakeBody[0]=[snakeX,snakeY]
     snakeX+=velocityX
     snakeY+=velocityY
 
-    for( let i = 0; i < snakeBody.length; i++){
-        htmlMarkup += `<div class="head" style="grid-area: ${snakeBody[i][1]}/${snakeX[i][0]}"></div>`;
+    for (let i=0; i< snakeBody.length;i++){
+        htmlMarkup += `<div class="head" style="grid-area: ${snakeBody[i][1]}/${snakeBody[i][0]}"></div>`;    
     }
+    
     
     playBoard.innerHTML=htmlMarkup;
 }

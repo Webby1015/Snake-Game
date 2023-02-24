@@ -43,13 +43,13 @@ body{
 }
 
 .play-board .food{
-    background: #597459;
+    background: #10ae3f;
     border-radius: 5px;
-    box-shadow: 5px 5px 5px #000000
+    box-shadow: 4px 4px 0px 4px #9f1616
 }
 
 .play-board .head{
-    box-shadow: 5px 5px 5px #000000;
-    background: #aeaeae;
+    box-shadow: 2px 2px 2px #000000;
+    background: #ffffff;
     border-radius: 5px;
 }
