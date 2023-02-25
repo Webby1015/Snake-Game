@@ -38,7 +38,7 @@ body{
     height: 100%;
     background: rgb(33, 33, 33);
     display: grid;
-    grid-template:repeat(30,1fr)/repeat(30,1fr) ;
+    grid-template:repeat(20,1fr)/repeat(20,1fr) ;
     border-radius: 20px ;
 }
 

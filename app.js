@@ -1,6 +1,7 @@
 const playBoard = document.querySelector(".play-board");
 const scoreElement = document.querySelector(".score")
 const highScoreElement = document.querySelector(".high-score")
+const controls = document.querySelectorAll(".controls i")
 let gameOver = false
 let foodX =13, foodY = 10;
 let snakeX = 5, snakeY =10;
@@ -13,8 +14,8 @@ let highScore = localStorage.getItem("high-score") || 0;
 highScoreElement.innerHTML = `high-score: ${highScore}`
 const changeFoodPosition = () => {
 
-    foodX = Math.floor(Math.random()*30)+1;
-    foodY = Math.floor(Math.random()*30)+1;
+    foodX = Math.floor(Math.random()*20)+1;
+    foodY = Math.floor(Math.random()*20)+1;
 
 }
 
@@ -45,6 +46,10 @@ const changeDirection = (e) => {
     intiGame();
 }
 
+controls.forEach(key => {
+    key.addEventListener("click",()=>changeDirection({key: key.dataset.key}))
+} )
+
 const intiGame = () => {
     if(gameOver) return handleGameOver()
     let htmlMarkup = `<div class="food" style="grid-area: ${foodY}/${foodX}"></div>`;
@@ -67,7 +72,7 @@ const intiGame = () => {
     snakeX+=velocityX
     snakeY+=velocityY
 
-    if(snakeX<=0 || snakeX >30 || snakeY<=  0 || snakeY>30){
+    if(snakeX<=0 || snakeX >20 || snakeY<=  0 || snakeY>20){
         gameOver=true
 
 
